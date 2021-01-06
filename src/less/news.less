@@ -1,0 +1,127 @@
+.news {
+  &_item:first-child {
+    margin-top: 40px;
+  }
+  &_item:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    .media_mobile({
+      display: block;
+      height: auto;
+      flex-wrap: unset;
+      clear: both;
+    });
+    height: 456px;
+    .block {
+      .column(6,6);
+      padding-left: 40px;
+      .media_mobile({
+        padding: 0px;
+        float: none;
+      });
+      &--title {
+        margin-top: 0px;
+      }
+    }
+    .news_item--img {
+      .column(6,6);
+      padding-right: 40px;
+      .media_mobile({
+        padding: 0px;
+        float: none;
+      })
+    }
+  }
+  &_item {
+    margin-bottom: 80px;
+    .block {
+      &--title {
+        margin-top: 24px;
+        .use-h2();
+        .use-bodoni();
+        .media_mobile({
+          font-size: 36px;
+          line-height: 36px;
+        });
+      }
+      &--date {
+        margin-top: 10px;
+        opacity: 0.5;
+      }
+      &--text {
+        margin: 24px 0px;
+      }
+      &--link {
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0.5;
+        width: 100%;
+        display: block;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &--img {
+      width: 100%;
+      object-fit: cover;
+      height: 448px;
+    }
+
+  }
+}
+.news_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  &_item:nth-child(2n) {
+    padding-right: 0px;
+    padding-left: 28px;
+    .media_mobile({
+      padding: 0px;
+      float: none;
+    });
+  }
+  &_item {
+    margin-bottom: 80px;
+    .column(6,6);
+    .media_mobile({
+      padding: 0px;
+      float: none;
+    });
+    padding-right: 28px;
+    .block {
+      &--title {
+        margin-top: 24px;
+        .use-h2();
+        .use-bodoni();
+      }
+      &--date {
+        margin-top: 10px;
+        opacity: 0.5;
+      }
+      &--text {
+        margin: 24px 0px;
+      }
+      &--link {
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0.5;
+        width: 100%;
+        display: block;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &--img {
+      width: 100%;
+      object-fit: cover;
+      height: 448px;
+    }
+
+  }
+  margin-bottom: 120px;
+}

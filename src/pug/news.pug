@@ -1,0 +1,30 @@
+extends template/layouts_page
+
+block var
+    - var page = 'production'
+
+block content
+    .content_page_wrapper
+        +breadcrumbs('black')
+        .h2--bordered Новости
+
+        .news
+                each val in [1, 2, 3]
+                    .news_item
+                        img.news_item--img(src="/images/main-two.png")
+                        .block
+                            .block--title Открытие шоу-рума в Москве
+                            p.block--date 16 августа 2018
+                            p.block--text Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed
+                            a.block--link(href="") Читать далее
+
+        .news_wrapper
+                each val in [1, 2]
+                    .news_wrapper_item
+                        img.news_wrapper_item--img(src="/images/main-two.png")
+                        .block
+                            .block--title Открытие шоу-рума
+                            p.block--date 16 августа 2018
+                            p.block--text Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit
+                            a.block--link(href="") Читать далее
+        +pagination()

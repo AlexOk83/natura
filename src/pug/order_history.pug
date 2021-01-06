@@ -1,0 +1,103 @@
+extends template/layout
+
+block var
+    - var page = 'production'
+    mixin product_history()
+        .block-body-item_product
+            .block-body_header--nomber
+            .block-body-item_product--code 00F23B
+            .block-body-item_product--name Murano Specchio MS 9
+            .block-body-item_product--price 6 350 р
+            .block-body-item_product--count 2,37 м
+            .block-body-item_product--total_price 12 457 р
+    mixin product_history_mobile()
+        .block-body-item_product
+            .block-body-item_product_top
+                .block-body-item_product_top--name Murano Specchio MS 9
+                .block-body-item_product_top--code 00F23B
+            .block-body-item_product_down
+                .block-body-item_product_down--price 6 350 р
+                .block-body-item_product_down--count 2,37 м
+                .block-body-item_product_down--total_price 12 457 р
+    mixin order_history_mobile()
+        .order_history_mobile_item
+            .block-header
+                .block-header--number 1
+                .block-header--date 12.05.2018
+                .block-header--price 56 743 р
+            .block-body
+                +product_history_mobile()
+                +product_history_mobile()
+                +product_history_mobile()
+                +product_history_mobile()
+                +product_history_mobile()
+                .block-body_footer
+                    .block-body_footer--total-text Итого без доставки:
+                    .block-body_footer--total-price_all 56 743 р
+    mixin order_history()
+        .order_history_item
+            .block-header
+                .block-header--number 1
+                .block-header--date 12.05.2018
+                .block-header--count 4 позиции
+                .block-header--price 56 743 р
+                .block-header--show
+                    a.block-header--show_link
+            .block-body
+                .block-body_header
+                    .block-body_header--nomber
+                    .block-body_header--code Артикул
+                    .block-body_header--name Название
+                    .block-body_header--price Цена за м
+                    .block-body_header--count Количество
+                    .block-body_header--total_price Стоимость
+                +product_history()
+                +product_history()
+                +product_history()
+                +product_history()
+                +product_history()
+                .block-body_footer
+                    .block-body_footer--total-empty_one
+                    .block-body_footer--total-empty_two
+                    .block-body_footer--total-empty_free
+                    .block-body_footer--total-empty_fo
+                    .block-body_footer--total-text Итого без доставки:
+                    .block-body_footer--total-price_all 56 743 р
+
+
+block content
+
+    .container
+        +breadcrumbs('black')
+        h2.h2--bordered История заказов
+        .order_history
+            .order_history_info
+                .order_history_info--title Контактная информация
+                .order_history_info_name
+                    p Константин Константинопольский
+                    a.order_history_info_name--edit(href="profile.html")
+                p.order_history_info--email konstantinopolsky@gmail.com
+                p.order_history_info--phone +7 999 123 45 67
+            .order_history_delevery
+                .order_history_delevery--title Адрес доставки
+                .order_history_delevery--adres
+                    p Москва, Ленинградское шоссе, 7а
+                    a.order_history_delevery--adres--edit(href="profile.html")
+
+            .order_history_items
+                .order_history--title История заказов
+                +order_history()
+                +order_history()
+                +order_history()
+                +order_history()
+                +order_history()
+                +order_history()
+
+            .order_history_items_mobile
+                .order_history--title История заказов
+                +order_history_mobile()
+                +order_history_mobile()
+                +order_history_mobile()
+                +order_history_mobile()
+                +order_history_mobile()
+                +order_history_mobile()

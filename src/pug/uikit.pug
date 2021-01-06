@@ -1,0 +1,40 @@
+extends template/layout
+block var
+  - var page = 'uikit'
+
+block content
+  .container
+    h2.h2 Шрифты
+    hr
+    h1.h1 Header H1
+    h2.h2 Header H2
+    h3.h3 Header H3
+    a.link-text LINK TEXT
+    p.body-text Body text
+    p.secondary-text Secondary text
+    h2.h2 Элементы форм
+    hr
+    .row
+      .uikit__row
+        +button('title', '')
+        +button('title', '', 1)
+      .uikit__row
+        +button('title', 'cart')
+        +button('title', 'cart', 1)
+      .uikit__row
+        +button('title', 'bordered')
+        +button('title', 'bordered', 1)
+      .uikit__row
+        +input('Title')
+        +input('Title','text','name1', 0, 1)
+        +input('Title','text','name2', 'error message', 0, 0)
+      .uikit__row
+        +input('Title','text','name3', 0, 0, 2)
+        +input('Disable','text','name4', 0, 1, 2)
+        +input('Title','text','name5', 'error message', 0, 0)
+      .uikit__row
+        +input('Введите пароль','password','name3', 0, 0, 2)
+        +input('Введите пароль','password','name4', 0, 1, 2)
+        +input('Введите пароль','password','name5', 'error message', 0 , 0)
+    +pagination()
+    +tabs()

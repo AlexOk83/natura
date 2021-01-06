@@ -1,0 +1,39 @@
+extends template/layouts_page
+block var
+    - var page = 'production'
+
+block content
+    +banner_headerpage('Вместе сильнее', "/images/men.png","/images/together-mobile.png", 'Мы приглашаем к сотрудничеству как московские,', 'так и региональные торговые фирмы')
+    .content_page_wrapper
+        +breadcrumbs('black')
+        .together_block
+            .together_advantage
+                .item
+                    img.item--img(src='/images/icon/together-1.svg')
+                    .item--text Обширный и регулярно пополняемый складской запас по популярным коллекциям
+                .item
+                    img.item--img(src='/images/icon/together-2.svg')
+                    .item--text Оптимальные и конкурентоспособные цены, индивидуальные скидки
+                .item
+                    img.item--img(src='/images/icon/together-3.svg')
+                    .item--text Оптимальные и конкурентоспособные цены, индивидуальные скидки
+                .item
+                    img.item--img(src='/images/icon/together-4.svg')
+                    .item--text Выгодные и удобные условия сотрудничества
+            .together_dealer
+                .together_dealer--title Стать нашим дилером просто!
+                p.together_dealer--text Достаточно предоставить нам краткую информацию о себе:
+                .together_dealer--block
+                    p Карточка с реквизитами юридического лица  и контактные данные
+                .together_dealer--block
+                    p Описание деятельности компании (какой материал  входит в Ваш ассортимент, какой ценовой политики придерживаетесь, с кем сотрудничаете и т.д.)
+                .together_dealer--block
+                    p Ссылки на сайт и социальные сети вашей организации  (при их наличии)
+
+        +feedback()
+        h3.help__group-title Материалы для загрузки
+        .row
+                +help_item('pdf', 'Каталог продукции')
+                +help_item('doc', 'Условия сотрудничества')
+                +help_item('xls', 'Прайс-лист')
+                +help_item('xls', 'Прайс-лист')

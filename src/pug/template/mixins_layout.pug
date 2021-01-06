@@ -1,0 +1,382 @@
+include example-code
+include variable
+include variable-layout
+
+mixin breadcrumbs(class_el, position_a)
+  .breadcrumbs(class= {'position_a': position_a})
+    ul(class= {'black': class_el == 'black'})
+      li
+        a(href="index.html") Главная
+      li
+        a(href="index.html") Продукция
+mixin breadcrumbs_new(isBlack, mas, name)
+    ul.breadcrumbs(class={'breadcrumbs--black': isBlack})
+      li.breadcrumbs__item: a(href="index.html") Главная
+      each item in mas
+        li.breadcrumbs__item: a(href="#")= item
+      li.breadcrumbs__item: span= name
+
+mixin see_design()
+  .see_design
+    img.see_design-img(src="/images/see_design.png")
+    .see_design-title Смотреть в интреьере
+  .see_design-block.content_page_wrapper
+    a.see_design-block-link_design(href='index.html') Вы дизайнер? Узнайте больше
+    a.see_design-block-link_dealer(href='index.html') Поиск ближайшего дилера
+
+mixin open_catalog()
+  .see_design
+    img.see_design-img(src="/images/open_catalog.png")
+    .see_design-title Открыть каталог
+  .see_design-block
+    a.see_design-block-link_design(href='index.html') Загрузить каталог
+    a.see_design-block-link_dealer(href='index.html') Остались вопросы?
+
+mixin banner_header(item)
+  .banner_header
+    if(item.breadcrubs)
+      +breadcrumbs('', 'position_a')
+    img.banner_header-img(src=item.img)
+    .banner_header-block
+      .banner_header-block-title=item.title
+      .banner_header-block-text=item.text
+      .banner_header-block-text=item.text2
+      .banner_header-block-text-no_letter=item.text3
+      .banner_header-block-text-no_letter=item.text4
+      .banner_header-block-link=item.link
+
+mixin banner_headergallery(title, img)
+  .banner_header
+    img.banner_header-img(src=img)
+    .banner_header-block
+      .banner_header-block-g-title=title
+
+mixin banner_headerpage(title, img, img_mobile, text1, text2)
+  .banner_header_page
+    .block
+      .block--title=title
+      .block--text
+        p=text1
+        p=text2
+      .block--button.form__button.form__button-- связаться с нами
+    img.banner_header_page--img(src=img)
+    img.banner_header_page--img_mobile(src=img_mobile)
+
+mixin header(page)
+  header.header(class= {'header--main': page == 'index'})
+    .header__left
+      .button.button__toggle-menu
+      .button.button__phone(data-link='m-phone')
+      +modal_phone()
+      a.button.button__chat(href="cart.html", data-link='m-chat')
+      +modal_chat()
+    a.header__logo(href='index.html')
+    .header__right
+      .button(onclick="location.href='cart.html'").button__cart: .count 4
+      form.search
+        input(type='text', name='search')
+        .button.button__clear
+      .button.button__search
+      .button.button__profile(data-link='sign-in')
+      +modalWindows()
+
+mixin footer()
+  footer.footer
+    .footer__social
+      .container.container--flex
+        .footer__subscribe-title Подпишитесь на рассылку
+        form.form__group
+          .form__control
+            input(type='text', placeholder='Введите e-mail')
+          button.form__button.form__button--base Подписаться
+        .social-icons
+          a.icon.icon--tw(href='#')
+          a.icon.icon--fb(href='#')
+          a.icon.icon--ig(href='#')
+          a.icon.icon--yt(href='#')
+          a.icon.icon--vk(href='#')
+    .container
+      .footer__wrapper
+        .footer__row
+          a.footer__link(href='#') Продукция
+          a.footer__link(href='#') Галерея
+          a.footer__link(href='#') Партнерам
+        .footer__row
+          a.footer__link(href='#') О компании
+          a.footer__link(href='#') Новости
+          a.footer__link(href='#') Мероприятия
+        .footer__row
+          a.footer__link(href='#') Дизайнерам
+          a.footer__link(href='#') 3D визуализатор
+          a.footer__link(href='#') Скачать каталог
+        .footer__row
+          a.footer__link(href='/help.html') Помощь
+          a.footer__link(href='#') Тех. документация
+          a.footer__link(href='#') Прайс-лист
+    .footer__logo
+
+mixin modal_phone()
+  .modal__window.modal__window--phone#m-phone
+    .wrapper
+      .modal__address
+        .city Москва
+        .phone 8 495 921 02 10
+      .modal__address
+        .city Санкт-Петербург
+        .phone 8 812 550 05 83
+      .modal__or или
+      form.modal__form
+        +input('номер телефона', 'text', 'phone', 0, 0, 2)
+        +button('заказать звонок')
+
+mixin modal_phone2()
+  .modal__overlay#m-phone-all
+    .modal__window.modal__window--center
+      .wrapper
+        .modal__address
+          .city Москва
+          .phone 8 495 921 02 10
+        .modal__address
+          .city Санкт-Петербург
+          .phone 8 812 550 05 83
+        .modal__or или
+        form.modal__form
+          +input('номер телефона', 'text', 'phone', 0, 0, 2)
+          +button('заказать звонок')
+
+mixin modal_chat()
+  .modal__window.modal__window--chat#m-chat
+    .wrapper
+      .modal__address
+        .city info@art-natura.ru
+      .modal__or или
+      +button('открыть чат')
+
+mixin modal_chat2()
+  .modal__overlay#m-chat-all
+    .modal__window.modal__window--center
+      .wrapper
+        .modal__address
+          .city info@art-natura.ru
+        .modal__or или
+        +button('открыть чат')
+
+mixin modalWindows()
+  .modal__window.modal__window--profile#sign-in
+    .wrapper
+      .modal__title Вход
+      form.modal__form
+        +input('E-mail', 'email', 'email', 0, 0, 0)
+        +input('Пароль', 'password', 'password', 0, 0, 0)
+        .modal__link(data-link='reset') Забыли пароль
+        +button('войти', 0, 0, 'sign-out')
+    .modal__footer
+      .modal__link(data-link='sign-up') Зарегистрироваться
+  .modal__window.modal__window--profile#sign-out
+    .wrapper
+      .modal__title1 Константин Константинопольский
+      .modal__title2 konstantinopolsky@gmail.com
+      +button('личный кабинет')
+    .modal__footer
+      .modal__link(data-link='sign-in') Выйти
+  .modal__window.modal__window--profile#sign-up
+    .wrapper
+      .modal__title Регистрация
+      form.modal__form
+        +input('E-mail', 'email', 'email', 0, 0, 0)
+        +input('Пароль', 'password', 'password', 0, 0, 0)
+        +button('зарегистрироваться')
+    .modal__footer
+      .modal__link(data-link='sign-in') войти
+  .modal__window.modal__window--profile#reset
+      .wrapper
+        .modal__title Восстановление пароля
+        form.modal__form
+          +input('E-mail', 'email', 'email', 0, 0, 0)
+          +button('восстановить')
+      .modal__footer
+        .modal__link(data-link='sign-in') войти
+mixin modalWindows2()
+  .modal__overlay#sign-in-mobile
+    .modal__window.modal__window--center
+      .wrapper
+        .modal__title Вход
+        form.modal__form
+          +input('E-mail', 'email', 'email', 0, 0, 0)
+          +input('Пароль', 'password', 'password', 0, 0, 0)
+          .modal__link(data-link='reset-mobile') Забыли пароль
+          +button('войти', 0, 0, 'sign-out-mobile')
+      .modal__footer
+        .modal__link(data-link='sign-up-mobile') Зарегистрироваться
+  .modal__overlay#sign-out-mobile
+    .modal__window.modal__window--center
+      .wrapper
+        .modal__title1 Константин Константинопольский
+        .modal__title2 konstantinopolsky@gmail.com
+        +button('личный кабинет')
+      .modal__footer
+        .modal__link(data-link='sign-in-mobile') Выйти
+  .modal__overlay#sign-up-mobile
+    .modal__window.modal__window--center
+      .wrapper
+        .modal__title Регистрация
+        form.modal__form
+          +input('E-mail', 'email', 'email', 0, 0, 0)
+          +input('Пароль', 'password', 'password', 0, 0, 0)
+          +button('зарегистрироваться')
+      .modal__footer
+        .modal__link(data-link='sign-in') войти
+  .modal__overlay#reset-mobile
+    .modal__window.modal__window--center
+        .wrapper
+          .modal__title Восстановление пароля
+          form.modal__form
+            +input('E-mail', 'email', 'email', 0, 0, 0)
+            +button('восстановить')
+        .modal__footer
+          .modal__link(data-link='sign-in-mobile') войти
+
+mixin modal_in()
+  .modal__window.modal__window--sign-in#m-sign-in
+    .wrapper
+      .modal__title Вход
+      form.modal__form
+        +input('E-mail', 'email', 'email')
+        +input('Пароль', 'password', 'password')
+        .modal__link(data-link='reset') Забыли пароль
+        +button('войти')
+    .modal__footer
+      .modal__link(data-link='sign-up') Зарегистрироваться
+
+
+
+mixin modal_product()
+  .modal__overlay#m-product
+    .modal__product
+      .wrapper
+        img.wrapper-img(src="/images/productions/product-1.png")
+        .wrapper-block
+          h2.wrapper-block-title MS 9
+          p.wrapper-block-category Murano Specchio
+          .wrapper-block-options
+            .wrapper-block-options-item
+              .wrapper-block-options-item-label Материал:
+              .wrapper-block-options-item-text Стекло
+
+            .wrapper-block-options-item
+              .wrapper-block-options-item-label Материал:
+              .wrapper-block-options-item-text Стекло
+
+            .wrapper-block-options-item
+              .wrapper-block-options-item-label Материал:
+              .wrapper-block-options-item-text Стекло
+
+            .wrapper-block-options-item
+              .wrapper-block-options-item-label Материал:
+              .wrapper-block-options-item-text Стекло
+          .wrapper-block-by
+            .wrapper_block-by-quanyty
+              .wrapper_block-by-quanyty-min
+              .wrapper_block-by-quanyty-text 1.45 кв. м.
+              .wrapper_block-by-quanyty-plus
+            .wrapper_block-by-price 12 490 руб.
+          .wrapper-block_add_to-cart.form__button.form__button-- Добавить в корзину
+          a.wrapper-block_more.form__button.form__button--bordered(href="/product.html") Подробнее
+
+
+mixin menu(page)
+  +modal_chat2()
+  +modal_phone2()
+  +modalWindows2()
+  .menu(class= {'menu--main': page == 'index'})
+    .menu__left
+      .button.button__toggle-menu
+      .menu__wrapper
+        ul.menu__list
+          each item in menuList
+            li.menu__item(class= {'active': page == item.url})
+              if (item.submenu)
+                a(href= item.url + '.html' data-menu= item.url)= item.name
+              else
+                a(href= item.url + '.html')= item.name
+        div.desktop__footer
+          li.menu__item.menu__item--small
+            a(href='#' data-link='m-chat-all')
+              i.icon.icon--chat
+              span Онлайн-чат
+          li.menu__item.menu__item--small
+            a(href='#' data-link='m-phone-all')
+              i.icon.icon--phone
+              span Заказать звонок
+
+        .mobile__footer
+          a.mobile__footer__icon.icon--profile(href='#' data-link='sign-in-mobile')
+          a.mobile__footer__icon.icon--phone(href='#' data-link='m-phone-all')
+          a.mobile__footer__icon.icon--chat(href='#' data-link='m-chat-all')
+
+    each item in menuList
+      if (item.submenu)
+        div.sub-menu(id= item.url)
+          .sub-menu__wrapper
+            each menu1 in item.submenu
+              .sub-menu__item(class= 'column-' + menu1.size)
+                .sub-menu__title= menu1.name
+                if (menu1.submenu)
+                  each menu2 in menu1.submenu
+                    if (menu2)
+                      ul.sub-menu__list
+                        if (menu2.submenu)
+                          li.sub-menu__list__title= menu2.name
+                          each menu3 in menu2.submenu
+                            if (menu3)
+                              li.sub-menu__text: a(href= menu3.url)= menu3.name
+                        else
+                          if (menu2.url)
+                            li.sub-menu__text: a(href= menu2.url)= menu2.name
+                          else
+                            li.sub-menu__text: span= menu2.name
+
+
+mixin paginationprevnext(lefttext, righttext = false )
+  .pagination-wrapper
+    a.pagination-wrapper-left(href="#")=lefttext
+    if(righttext )
+      a.pagination-wrapper-right(href="#")=righttext
+
+
+mixin feedback()
+  .feedback--title Заинтересовало ?
+  .feedback
+
+    .feedback_contact
+      .contact_block
+        .contact_block--phone 8 495 921 02 10
+        p.contact_block--city Москва
+        .contact_block--email arch@ardostudio.ru
+      .contact_block
+        .contact_block--phone 8 495 921 02 10
+        p.contact_block--city Санкт-петербург
+        .contact_block--link заказать звонок
+        .contact_block--email.hide_desktop.hide_tablet arch@ardostudio.ru
+
+      .contact_block--or или
+    .feedback_form
+      .feedback_form--title Отправьте заявку
+      .form__control
+        label Ваше имя
+        input
+      .form__control
+        label E-mail
+        input
+      .form__control
+        label Номер телефона
+        input
+      .form__control
+        label Ваш вопрос
+        textarea
+      .form__button.form__button-- Отправить
+
+mixin help_item(type, text)
+  a.help-item--wrapper(href="#")
+    .help-item(class= 'help-item--' + type href='#')
+      .help-item__text= text

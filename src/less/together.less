@@ -1,0 +1,71 @@
+.together_block {
+  .together_advantage {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .item:last-child {
+      img {
+        padding: 30px;
+      }
+    }
+    .item {
+      text-align: center;
+      height: 224px;
+      .column(3,3,6);
+
+      img {
+        padding: 20px;
+        height: 136px;
+        object-fit: cover;
+
+      }
+      &--text {
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 24px;
+        color: @black;
+      }
+    }
+  }
+  .together_dealer {
+    position: relative;
+    margin-top: 80px;
+    min-height: 300px;
+    &--title {
+      .use-h3();
+      text-align: center;
+    }
+    &--text {
+      text-align: center;
+      margin-top: 24px;
+    }
+    &--block:last-child {
+      margin-bottom: 80px;
+    }
+    &--block {
+      margin-top: 40px;
+      position: relative;
+      opacity: 0.7;
+      .column(6,6);
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        padding-left: 30px;
+        width: 90%  ;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 2.5px;
+        background-color: @black;
+      }
+    }
+  }
+}

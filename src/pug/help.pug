@@ -1,0 +1,18 @@
+extends template/layout
+
+block var
+  - var page = 'help'
+
+block content
+
+  .container
+    h2.h2--bordered Помощь
+    h3.help__group-title Инструкции и рекомендации
+    .row
+      - for(i=0; i<6; i++)
+        +help_item('pdf', 'Инструкция по укладке стеклянной мозаики')
+    h3.help__group-title Другие материалы
+    .row
+      +help_item('pdf', 'Каталог продукции')
+      +help_item('doc', 'Условия сотрудничества')
+      +help_item('xls', 'Прайс-лист')

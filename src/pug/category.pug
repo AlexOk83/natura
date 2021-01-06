@@ -1,0 +1,18 @@
+extends template/layouts_page
+include template/mixin-category
+
+block var
+    - var page = 'production'
+
+block content
+    +banner_header(category_slider)
+    .content_page_wrapper
+        +breadcrumbs('black')
+        +paginationprevnext('Classic glass', 'Crystal')
+
+        .category_products
+            each val in [1, 2, 3, 4, 5,6,7,8,9,10,11,12]
+                +category_product()
+        +tabs()
+    +see_design()
+

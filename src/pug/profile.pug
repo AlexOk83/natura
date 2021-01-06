@@ -1,0 +1,33 @@
+extends template/layout
+
+block var
+    - var page = 'production'
+
+block content
+
+    .container
+        +breadcrumbs('black')
+        h2.h2--bordered Личный кабинет
+        .profile
+            .profile_row
+                .profile_account
+                    .profile--title Аккаунт
+                    +input2('in', 'email', 'E-mail', true, '')
+                    +input2('in', 'password', 'Пароль', true, '')
+                    +input2('in', 'password', 'Повторите пароль', true, '')
+            .profile_row
+                .profile_info
+                    .profile--title Контактная информация
+                    +input2('in', 'email', 'E-mail', true, '')
+                    +input2('in', 'password', 'Пароль', true, '')
+                    +input2('in', 'password', 'Повторите пароль', true, '')
+                .profile_delevery
+                    .profile--title Адрес доставки
+                    +input2('in', 'name', 'Город', true, '')
+                    +input2('in', 'name', 'Улица', true, '')
+                    .tabs__container--row
+                         +input2('in', 'name', 'Дом', true, '')
+                         +input2('in', 'name', 'Квартира', true, '')
+                         +input2('in', 'name', 'Корпус', true, '')
+
+            button.form__button.form__button-- Сохранить изменения

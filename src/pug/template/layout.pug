@@ -1,0 +1,35 @@
+doctype
+include variable
+include variable-layout
+include mixins_layout
+include mixins_index
+include mixins_uikit
+html(lang="ru")
+    head
+        title Art&Natura
+
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
+        link(rel="styleSheet", media="all", type="text/css", href="css/jquery.fancybox.css")
+        link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
+
+
+    body
+      block var
+      +menu(page)
+      +header(page)
+
+      main.content
+        block content
+
+      +footer()
+
+
+      script( src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAkpsFR3S2EGGF2vtQiGgxFIXtAEkjDZ7M")
+      script(src="js/jquery.js")
+      script(src="js/owl.carousel-min.js")
+
+
+
+      script(src="js/main.js")
+

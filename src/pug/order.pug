@@ -1,0 +1,89 @@
+extends template/layout
+
+block var
+    - var page = 'production'
+    mixin cart_item()
+        .order_cart_item
+            a.order_cart_item--name(href="product.html") Murano Specchio MS 9
+            p.order_cart_item--price 35 856.00 р
+block content
+    .order_cart_mobile
+        .block_title
+            p.block_title--cart Содержимое корзины
+                a.block_title--cart_icon
+            a.block_title--cart_price 68 808.00 р
+        .block_content
+            .block_content--title В корзине
+            p.block_content--count 4 товара
+            +cart_item()
+            +cart_item()
+            +cart_item()
+            +cart_item()
+            .order_cart_line
+            .order_cart_totali--title Итого без доставки
+            p.order_cart_totali--count 68 808.00 р
+    .container
+        +breadcrumbs('black')
+        +paginationprevnext('В корзину')
+
+
+        h2.h2--bordered Оформление заказа
+            a.h2--link(href="#") Уже есть аккаунт? Войдите
+        a.h2--link_mobile(href="#") Уже есть аккаунт? Войдите
+        .order
+            .order_user_data
+                .order_user_data--title Получатель
+                ul.tabs.limit_2
+                    li.tabs__item(data-tab='user_fiz').active Физическое лицо
+                    li.tabs__item(data-tab='user_yr') Юридическое лицо
+                .tabs__container.active#user_fiz
+                    +input2('in', 'name', 'E-mail', true, '')
+                    +input2('in', 'name', 'Имя', true, '')
+                    +input2('in', 'name', 'Фамилия', true, '')
+                    +input2('in', 'name', 'Контактный телефон', true, '')
+                .tabs__container#user_yr
+                    +input2('in', 'name', 'Название компании', true, '')
+                    +input2('in', 'name', 'Телефон', true, '')
+                    +input2('in', 'name', 'Почтовый адрес', true, '')
+                    +input2('in', 'name', 'Юридический адрес', true, '')
+                    +input2('in', 'name', 'Генеральный директор', true, '')
+                    +input2('in', 'name', 'ИНН', true, 'mt40')
+                    +input2('in', 'name', 'КПП', true, 'mb40')
+                    +input2('in', 'name', 'К/С', true, '')
+                    +input2('in', 'name', 'БИК', true, '')
+                    +input2('in', 'name', 'ОКПО', true, '')
+                    +input2('in', 'name', 'Банк', true, '')
+                .order_user_data--title Адрес доставки
+                ul.tabs.limit_2
+                    li.tabs__item(data-tab='delevery').active Доставка
+                    li.tabs__item(data-tab='pickup') Самовывоз
+                .tabs__container.active#delevery
+                    +input2('in', 'name', 'Город', true, '')
+                    +input2('in', 'name', 'Улица', true, '')
+                    .tabs__container--row
+                        +input2('in', 'name', 'Дом', true, '')
+                        +input2('in', 'name', 'Квартира', true, '')
+                        +input2('in', 'name', 'Корпус', true, '')
+                    +input2('ta', 'name', 'Комметарий к заказу', true, '')
+                .tabs__container#pickup
+                    p Вы можете забрать ваш заказ самостоятельно по адресу:  Московская область, г.п. Нахабино, ул. Школьная д.8
+                .order_user_data--title Оплата
+                ul.tabs.limit_2
+                    li.tabs__item(data-tab='cash').active Картой
+                    li.tabs__item(data-tab='by_hand') Наличными
+                .tabs__container.active#cash
+                    p Картой
+                .tabs__container#by_hand
+                    p Наличными
+
+                a.form__button.form__button--(href="order_history.html") Оформить заказ
+            .order_cart
+                .order_cart--title В корзине
+                p.order_cart--count 4 товара
+                +cart_item()
+                +cart_item()
+                +cart_item()
+                +cart_item()
+                .order_cart_line
+                .order_cart_totali--title Итого без доставки
+                p.order_cart_totali--count 68 808.00 р

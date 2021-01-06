@@ -1,0 +1,15 @@
+extends template/layouts_page
+include template/mixin_gallery
+block var
+    - var page = 'production'
+
+block content
+    +banner_headergallery('Галерея', "/images/productions/production-fo.png")
+    .content_page_wrapper
+        +breadcrumbs('black')
+        +houses()
+        +material()
+        +collection()
+    +open_catalog()
+
+

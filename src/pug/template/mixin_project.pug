@@ -1,0 +1,26 @@
+
+mixin project()
+    .project
+        .project--title Мозаичное панно в ванной комнате
+        img.project--img(src="/images/main-first.png")
+        .project_author
+
+            .project_author_name
+                .project_author_name--img
+                    img(src="/images/main-first.png")
+                .project_author_name_wrapper
+                    p.project_author_name_wrapper--label Автор проекта
+                    p.project_author_name_wrapper--text Алексей Кузьмин
+            .project_author_about
+                p.project_author_about--label В этом проекте
+                p.project_author_about--text мозаика коллекции Murano Specchio
+        p.project_text Грациозность, изысканность и роскошь. Роскошь во всем – от пола до болтиков на сантехнике. Глубокие украшения стен, сродни дворцовым залам, элегантно выражают атмосферу уюта, комфорта и изящества.  А красочная мозаика на стенах и множество декоративных элементов отделки добавляют изысканности и утонченности. При всей своей, на первый взгляд, феерии, интерьер неимоверно красив и элегантен. Современный, очень насыщенный интерьер с нотками рококо — в нем безупречно сочетаются спокойное благородство камня и неповторимое богатство составляющих мозаики
+        img.project--img_content(src="/images/main-first.png")
+        img.project--img_content(src="/images/main-first.png")
+        img.project--img_content(src="/images/main-first.png")
+        .project_material
+            .project_material--title Материалы в этом проекте
+            .category_products
+                    each val in [1, 2, 3,4]
+                        +category_product()
+

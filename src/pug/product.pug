@@ -1,0 +1,34 @@
+extends template/layouts_page
+include template/mixin_product
+include template/mixin-category
+block var
+    - var page = 'production'
+
+block content
+    .content_page_wrapper
+        +breadcrumbs('black')
+        +paginationprevnext('коллекция', 'MS 10')
+        +product_slider()
+        +product_description()
+        .category_products-wrapper
+            .category_products
+                .h3 Из этой коллекции
+                +category_product()
+                +category_product()
+                +category_product()
+                +category_product()
+
+                .h3 Из другой коллекции
+                each val in [1, 2, 3, 4]
+                    +category_product()
+
+                +tabs()
+
+            .category_products_mobile
+                .h3 Из этой коллекции
+                +products_slider()
+                .h3 Из другой коллекции
+                +products_slider()
+                +tabs()
+    +see_design()
+

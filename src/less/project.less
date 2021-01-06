@@ -1,0 +1,142 @@
+.project {
+  &--title {
+    .use-h2();
+    margin-bottom: 40px;
+  }
+  &--img_content {
+    object-fit: cover;
+    max-height: 432px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &_text {
+    margin-bottom: 80px;
+  }
+  &--img {
+    object-fit: cover;
+    max-height: 432px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  &_material {
+    margin-top: 40px;
+    &--title {
+      .use-h3();
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  }
+  &_author {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .media_tablet({
+      height: 88px;
+    });
+    .media_desktop({
+      height: 88px;
+    });
+
+    margin-bottom: 64px;
+    .media_mobile({
+      text-align: center;
+    });
+    &_about {
+      height: 40px;
+      margin-top: 22px;
+      &--label {
+        opacity: 0.5;
+      }
+      &--text {
+        color: @green;
+        .media_mobile({
+          color: @cGreen;
+        })
+      }
+    }
+    &_name {
+      .column(6,6,12,12);
+      &--img {
+        .column(4,4,12,12);
+
+        img {
+
+          width: 88px;
+          height: 88px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      &_wrapper {
+        height: 40px;
+        margin-top: 22px;
+        .column(8,8,12,12);
+        &--label {
+          opacity: 0.5;
+        }
+      }
+    }
+    &_about {
+      .column(6,6,12,12);
+    }
+  }
+
+  &_design {
+    margin-top: 80px;
+    margin-bottom: 120px;
+    width: 100%;
+    clear: both;
+
+    &--title {
+      .use-h2();
+      text-align: center;
+      .use-bodoni();
+      margin-bottom: 56px;
+
+
+    }
+    &_wrapper_desctop {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      .hide_mobile();
+      .item {
+        .column(4,4,6,12);
+        padding: 15px;
+        &--img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &--title {
+
+          display: block;
+          margin-top: 24px;
+        }
+      }
+    }
+    &_wrapper_mobile {
+      .hide_desktop();
+      .hide_tablet();
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        .column(12);
+
+        &--img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &--title {
+
+          display: block;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}

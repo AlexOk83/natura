@@ -1,0 +1,57 @@
+@font-path: '../fonts';
+
+.fontFace(@font-family, @file, @weight, @style) {
+  @font-face {
+    font-family: '@{font-family}';
+    src:  url('@{font-path}/@{file}.eot');
+    src:  url('@{font-path}/@{file}.eot#iefix') format('embedded-opentype'),
+    url('@{font-path}/@{file}.woff2') format('woff2'),
+    url('@{font-path}/@{file}.ttf') format('truetype'),
+    url('@{font-path}/@{file}.woff') format('woff');
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+
+.fontFace('bodoni', 'bodoni', normal, normal);
+.fontFace('optima', 'optima-cyr-regular', normal, normal);
+.fontFace('optima', 'optima-cyr-italic', normal, Italic);
+.fontFace('optima', 'optima-cyr-bold', bold, normal);
+
+.use-bodoni() {
+  font-family: 'bodoni', Arial;
+  
+}
+.use-text() {
+  font-size: 16px;
+  line-height: 25px;
+  color: @white;
+  letter-spacing: 0.25rem;
+  margin-top: 24px;
+}
+.use-link() {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.25rem;
+
+  display: block;
+  text-transform: uppercase;
+  color: #0F161C;
+  opacity: 0.5;
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+.use-h3() {
+  font-size: 22px;
+  line-height: 27px;
+
+}
+.use-h2() {
+  font-size: 48px;
+  line-height: 53px;
+  letter-spacing: 0.03rem;
+  .use-bodoni();
+}

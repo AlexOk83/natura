@@ -1,0 +1,16 @@
+extends template/layouts_page
+include template/mixin_gallery
+block var
+    - var page = 'production'
+
+block content
+  +banner_headergallery('Гостиные', "/images/banner_header.png")
+  .content_page_wrapper
+
+    +breadcrumbs('black')
+    +paginationprevnext('кухни', 'Коммерческие помещения')
+    +houses()
+  +open_catalog()
+
+
+

@@ -1,0 +1,21 @@
+mixin button(title, modify, disabled, data_link)
+  if (disabled)
+    button.form__button(class='form__button--'+modify, disabled)= title
+  else if (data_link)
+    button.form__button(class='form__button--'+modify, data-link= data_link)= title
+  else
+    button.form__button(class='form__button--'+modify)= title
+mixin input(title, type, name, error, disabled, withoutLabel)
+  .form__control(
+    class={'form__control--error': error},
+    class={'form__control--disabled': disabled},
+    class={'form__control--not-label': withoutLabel == 1})
+    if (withoutLabel <= 1)
+      label= title
+    if (disabled)
+      input(type= type || 'text', placeholder= 'Введите ' + title, name= name, readonly)
+    else
+      input(type= type || 'text', placeholder= 'Введите ' + title, name= name)
+    if (type == 'password')
+      .eye
+    .error= error

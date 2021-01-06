@@ -1,0 +1,35 @@
+extends template/layouts_page
+include template/mixin_project
+include template/mixin-category
+block var
+    - var page = 'production'
+
+block content
+    .content_page_wrapper
+        +breadcrumbs('black')
+        +paginationprevnext('коллекция', 'MS 10')
+        +project()
+    .content_page_mobile_wrapper
+        .project_design
+            .project_design--title Интерьеры
+            .project_design_wrapper_desctop
+                .item
+                    img.item--img(src="/images/main-first.png")
+                    a.item--title(href="#") Ванная комната
+                .item
+                    img.item--img(src="/images/main-first.png")
+                    a.item--title(href="#") Ванная комната
+                .item
+                    img.item--img(src="/images/main-first.png")
+                    a.item--title(href="#") Ванная комната
+
+            .project_design_wrapper_mobile.mobile_slider
+                .item
+                    img.item--img(src="/images/main-first.png")
+                    a.item--title(href="#") Ванная комната
+                .item
+                    img.item--img(src="/images/main-first.png")
+                    a.item--title(href="#") Ванная комната
+                .item
+                    img.item--img(src="/images/main-first.png")
+                    a.item--title(href="#") Ванная комната

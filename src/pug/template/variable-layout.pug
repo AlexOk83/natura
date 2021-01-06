@@ -1,0 +1,324 @@
+-
+  var
+  mosaica_1_1 = {
+  name: 'Marble',
+  url: 'production.html'
+  },
+  mosaica_1_2 = {
+  name: 'Basket',
+  url: 'production.html'
+  },
+  mosaica_1_3 = {
+  name: 'Octagon',
+  url: 'production.html'
+  },
+
+  mosaica_2_1 = {
+  name: 'Classic glass',
+  url: 'production.html'
+  },
+  mosaica_2_2 = {
+  name: 'Murano Specchio',
+  url: '#'
+  },
+  mosaica_2_3 = {
+  name: 'Crystal',
+  url: 'production.html'
+  },
+  mosaica_2_4 = {
+  name: 'Drops',
+  url: 'production.html'
+  },
+  mosaica_2_5 = {
+  name: 'Mix',
+  url: 'production.html'
+  },
+
+  mosaica_3_1 = {
+  name: 'Boston',
+  url: 'production.html'
+  },
+  mosaica_3_2 = {
+  name: 'Equilibrio',
+  url: 'production.html'
+  },
+  mosaica_3_3 = {
+  name: 'Stonewood',
+  url: 'production.html'
+  },
+
+  mosaica_1 = {
+  name: 'Каменная',
+  submenu: [
+  mosaica_1_1,
+  mosaica_1_2,
+  mosaica_1_3,
+  ]
+  },
+  mosaica_2 = {
+  name: 'Стеклянная',
+  submenu: [
+  mosaica_2_1,
+  mosaica_2_2,
+  mosaica_2_3,
+  mosaica_2_4,
+  mosaica_2_5,
+  ]
+  },
+  mosaica_3 = {
+  name: 'комбинированная',
+  submenu: [
+  mosaica_3_1,
+  mosaica_3_2,
+  mosaica_3_3,
+  ]
+  },
+
+  mosaica = {
+  name: 'Мозайка',
+  size: 3,
+  submenu: [
+    mosaica_1,
+    mosaica_2,
+    mosaica_3,
+  ]
+  },
+
+  sercala = {
+    name: 'Зеркала',
+    size: 1,
+    submenu: [
+      {
+        name: 'Зеркала ручной работы',
+        url: 'gallery_page.html'
+      }
+    ]
+  },
+  panno = {
+    name: 'Панно',
+    size: 1,
+    submenu: [
+      {
+        name: 'Индивидуальные панно',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Наборные панно',
+        url: 'gallery_page.html'
+      }
+    ]
+  }
+
+  gallery_1 = {
+    name: 'Помещения',
+    size: 1,
+    submenu: [
+      {
+        name: 'Ванные',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Кухни',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Гостинные',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Коммерческие помещения',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Бассейны',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Хамамы',
+        url: 'gallery_page.html'
+      }
+    ]
+  }
+  gallery_2 = {
+    name: 'Материалы',
+    size: 1,
+    submenu: [
+      {
+        name: 'Камень',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Стекло',
+        url: 'gallery_page.html'
+      },
+      {
+        name: 'Декор',
+        url: 'gallery_page.html'
+      }
+    ]
+  }
+  gallery_3 = {
+    name: 'Коллекции',
+    size: 1,
+    submenu: [
+      mosaica_1_1,
+      mosaica_1_2,
+      mosaica_1_3,
+      mosaica_2_1,
+      mosaica_2_2,
+      mosaica_2_3,
+      mosaica_2_4,
+      mosaica_2_5,
+      mosaica_3_1,
+      mosaica_3_2,
+      mosaica_3_3,
+    ]
+  }
+
+  production = {
+  name: 'Продукция',
+  url: 'production',
+  submenu: [
+    mosaica,
+    sercala,
+    panno,
+  ]
+  },
+  gallery = {
+    name: 'Галлерея',
+    url: 'gallery',
+    submenu: [
+      gallery_1,
+      gallery_2,
+      gallery_3,
+    ]
+
+  },
+  design = {
+    name: 'Дизайнерам',
+    url: 'cooperate'
+  },
+  partner = {
+    name: 'Партнерам',
+    url: 'together'
+  },
+  news = {
+    name: 'Новости',
+    url: 'news'
+  },
+  events = {
+    name: 'Мероприятия',
+    url: 'events'
+  },
+  about = {
+    name: 'О компании',
+    url: 'company'
+  },
+  help = {
+    name: 'Помощь',
+    url: 'help'
+  },
+  menuList = [
+    production,
+    gallery,
+    design,
+    partner,
+    news,
+    events,
+    about,
+    help,
+  ],
+
+  email = 'example@gmail.com',
+  phone = '+39 (333)',
+  phone_bold = '222 33 66'
+
+  category_slider = {
+    title : 'Murano Specchio',
+    text : "Среди элементов коллекции Murano Speccio - богатые оттенки, имитирующие драгоценные металлы: золото, серебро, бронзу. Art&Natura – роскошь в каждой детали.",
+    img : "/images/banner_header.png",
+    link : 'смотреть в интерьере',
+    breadcrubs : false
+  }
+
+
+  company_slider = {
+    title : 'О компании',
+    text3 : "Art&Natura – один из ведущих производителей мозаики из стекла и натурального камня класса Lux. \n",
+    text4 : "Основанный в 2009 году, бренд Art&Natura успел прочно закрепить свои позиции на мировом рынке отделочных материалов и завоевать признание архитекторов, дизайнеров, частных потребителей и поставщиков",
+    img : "/images/about/about_slide.png",
+    breadcrubs : true
+  }
+
+
+
+  company_slider2 = {
+    title : 'Мозаичная мастерская',
+    text3 : "Эксклюзив – это всегда центр внимания,  признак статуса и достатка. ",
+    text4 : "От персонального мозаичного микса для кухонного фартука до бассейна и хаммама, от небольшой фрески до огромного художественного панно – мозаичная мастерская Art&Natura основана специально для того, чтобы ваш интерьер был эксклюзивным, неповторимым",
+    img : "/images/about/about_slide2.png",
+    breadcrubs : false
+  }
+
+  company_people = [
+    {
+        img : "/images/about/people1.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people2.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people3.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people4.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people5.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people6.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people7.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people8.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people9.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people10.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+    {
+        img : "/images/about/people11.png",
+        title : "Алан Цориев",
+        desc : "менеджер по продажам",
+    },
+  ]
+
+
+
+
+

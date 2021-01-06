@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Art&Natura</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="styleSheet" media="all" type="text/css" href="css/jquery.fancybox.css">
+    <link rel="styleSheet" media="all" type="text/css" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="modal__overlay" id="m-chat-all">
+      <div class="modal__window modal__window--center">
+        <div class="wrapper">
+          <div class="modal__address">
+            <div class="city">info@art-natura.ru</div>
+          </div>
+          <div class="modal__or">или</div>
+          <button class="form__button form__button--undefined">открыть чат</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal__overlay" id="m-phone-all">
+      <div class="modal__window modal__window--center">
+        <div class="wrapper">
+          <div class="modal__address">
+            <div class="city">Москва</div>
+            <div class="phone">8 495 921 02 10</div>
+          </div>
+          <div class="modal__address">
+            <div class="city">Санкт-Петербург</div>
+            <div class="phone">8 812 550 05 83</div>
+          </div>
+          <div class="modal__or">или</div>
+          <form class="modal__form">
+            <div class="form__control">
+              <input type="text" placeholder="Введите номер телефона" name="phone">
+              <div class="error">0</div>
+            </div>
+            <button class="form__button form__button--undefined">заказать звонок</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal__overlay" id="sign-in-mobile">
+      <div class="modal__window modal__window--center">
+        <div class="wrapper">
+          <div class="modal__title">Вход</div>
+          <form class="modal__form">
+            <div class="form__control">
+              <label>E-mail</label>
+              <input type="email" placeholder="Введите E-mail" name="email">
+              <div class="error">0</div>
+            </div>
+            <div class="form__control">
+              <label>Пароль</label>
+              <input type="password" placeholder="Введите Пароль" name="password">
+              <div class="eye"></div>
+              <div class="error">0</div>
+            </div>
+            <div class="modal__link" data-link="reset-mobile">Забыли пароль</div>
+            <button class="form__button form__button--0" data-link="sign-out-mobile">войти</button>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <div class="modal__link" data-link="sign-up-mobile">Зарегистрироваться</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__overlay" id="sign-out-mobile">
+      <div class="modal__window modal__window--center">
+        <div class="wrapper">
+          <div class="modal__title1">Константин Константинопольский</div>
+          <div class="modal__title2">konstantinopolsky@gmail.com</div>
+          <button class="form__button form__button--undefined">личный кабинет</button>
+        </div>
+        <div class="modal__footer">
+          <div class="modal__link" data-link="sign-in-mobile">Выйти</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__overlay" id="sign-up-mobile">
+      <div class="modal__window modal__window--center">
+        <div class="wrapper">
+          <div class="modal__title">Регистрация</div>
+          <form class="modal__form">
+            <div class="form__control">
+              <label>E-mail</label>
+              <input type="email" placeholder="Введите E-mail" name="email">
+              <div class="error">0</div>
+            </div>
+            <div class="form__control">
+              <label>Пароль</label>
+              <input type="password" placeholder="Введите Пароль" name="password">
+              <div class="eye"></div>
+              <div class="error">0</div>
+            </div>
+            <button class="form__button form__button--undefined">зарегистрироваться</button>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <div class="modal__link" data-link="sign-in">войти</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__overlay" id="reset-mobile">
+      <div class="modal__window modal__window--center">
+        <div class="wrapper">
+          <div class="modal__title">Восстановление пароля</div>
+          <form class="modal__form">
+            <div class="form__control">
+              <label>E-mail</label>
+              <input type="email" placeholder="Введите E-mail" name="email">
+              <div class="error">0</div>
+            </div>
+            <button class="form__button form__button--undefined">восстановить</button>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <div class="modal__link" data-link="sign-in-mobile">войти</div>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="menu__left">
+        <div class="button button__toggle-menu"></div>
+        <div class="menu__wrapper">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="production.html" data-menu="production">Продукция</a>
+            </li>
+            <li class="menu__item"><a href="gallery.html" data-menu="gallery">Галлерея</a>
+            </li>
+            <li class="menu__item"><a href="cooperate.html">Дизайнерам</a>
+            </li>
+            <li class="menu__item"><a href="together.html">Партнерам</a>
+            </li>
+            <li class="menu__item"><a href="news.html">Новости</a>
+            </li>
+            <li class="menu__item"><a href="events.html">Мероприятия</a>
+            </li>
+            <li class="menu__item"><a href="company.html">О компании</a>
+            </li>
+            <li class="menu__item active"><a href="help.html">Помощь</a>
+            </li>
+          </ul>
+          <div class="desktop__footer">
+            <li class="menu__item menu__item--small"><a href="#" data-link="m-chat-all"><i class="icon icon--chat"></i><span>Онлайн-чат</span></a></li>
+            <li class="menu__item menu__item--small"><a href="#" data-link="m-phone-all"><i class="icon icon--phone"></i><span>Заказать звонок</span></a></li>
+          </div>
+          <div class="mobile__footer"><a class="mobile__footer__icon icon--profile" href="#" data-link="sign-in-mobile"></a><a class="mobile__footer__icon icon--phone" href="#" data-link="m-phone-all"></a><a class="mobile__footer__icon icon--chat" href="#" data-link="m-chat-all"></a></div>
+        </div>
+      </div>
+      <div class="sub-menu" id="production">
+        <div class="sub-menu__wrapper">
+          <div class="sub-menu__item column-3">
+            <div class="sub-menu__title">Мозайка</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__list__title">Каменная</li>
+              <li class="sub-menu__text"><a href="production.html">Marble</a></li>
+              <li class="sub-menu__text"><a href="production.html">Basket</a></li>
+              <li class="sub-menu__text"><a href="production.html">Octagon</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__list__title">Стеклянная</li>
+              <li class="sub-menu__text"><a href="production.html">Classic glass</a></li>
+              <li class="sub-menu__text"><a href="#">Murano Specchio</a></li>
+              <li class="sub-menu__text"><a href="production.html">Crystal</a></li>
+              <li class="sub-menu__text"><a href="production.html">Drops</a></li>
+              <li class="sub-menu__text"><a href="production.html">Mix</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__list__title">комбинированная</li>
+              <li class="sub-menu__text"><a href="production.html">Boston</a></li>
+              <li class="sub-menu__text"><a href="production.html">Equilibrio</a></li>
+              <li class="sub-menu__text"><a href="production.html">Stonewood</a></li>
+            </ul>
+          </div>
+          <div class="sub-menu__item column-1">
+            <div class="sub-menu__title">Зеркала</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Зеркала ручной работы</a></li>
+            </ul>
+          </div>
+          <div class="sub-menu__item column-1">
+            <div class="sub-menu__title">Панно</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Индивидуальные панно</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Наборные панно</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sub-menu" id="gallery">
+        <div class="sub-menu__wrapper">
+          <div class="sub-menu__item column-1">
+            <div class="sub-menu__title">Помещения</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Ванные</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Кухни</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Гостинные</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Коммерческие помещения</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Бассейны</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Хамамы</a></li>
+            </ul>
+          </div>
+          <div class="sub-menu__item column-1">
+            <div class="sub-menu__title">Материалы</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Камень</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Стекло</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="gallery_page.html">Декор</a></li>
+            </ul>
+          </div>
+          <div class="sub-menu__item column-1">
+            <div class="sub-menu__title">Коллекции</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Marble</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Basket</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Octagon</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Classic glass</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="#">Murano Specchio</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Crystal</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Drops</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Mix</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Boston</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Equilibrio</a></li>
+            </ul>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__text"><a href="production.html">Stonewood</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__left">
+        <div class="button button__toggle-menu"></div>
+        <div class="button button__phone" data-link="m-phone"></div>
+        <div class="modal__window modal__window--phone" id="m-phone">
+          <div class="wrapper">
+            <div class="modal__address">
+              <div class="city">Москва</div>
+              <div class="phone">8 495 921 02 10</div>
+            </div>
+            <div class="modal__address">
+              <div class="city">Санкт-Петербург</div>
+              <div class="phone">8 812 550 05 83</div>
+            </div>
+            <div class="modal__or">или</div>
+            <form class="modal__form">
+              <div class="form__control">
+                <input type="text" placeholder="Введите номер телефона" name="phone">
+                <div class="error">0</div>
+              </div>
+              <button class="form__button form__button--undefined">заказать звонок</button>
+            </form>
+          </div>
+        </div><a class="button button__chat" href="cart.html" data-link="m-chat"></a>
+        <div class="modal__window modal__window--chat" id="m-chat">
+          <div class="wrapper">
+            <div class="modal__address">
+              <div class="city">info@art-natura.ru</div>
+            </div>
+            <div class="modal__or">или</div>
+            <button class="form__button form__button--undefined">открыть чат</button>
+          </div>
+        </div>
+      </div><a class="header__logo" href="index.html"></a>
+      <div class="header__right">
+        <div class="button button__cart" onclick="location.href='cart.html'">
+          <div class="count">4</div>
+        </div>
+        <form class="search">
+          <input type="text" name="search">
+          <div class="button button__clear"></div>
+        </form>
+        <div class="button button__search"></div>
+        <div class="button button__profile" data-link="sign-in"></div>
+        <div class="modal__window modal__window--profile" id="sign-in">
+          <div class="wrapper">
+            <div class="modal__title">Вход</div>
+            <form class="modal__form">
+              <div class="form__control">
+                <label>E-mail</label>
+                <input type="email" placeholder="Введите E-mail" name="email">
+                <div class="error">0</div>
+              </div>
+              <div class="form__control">
+                <label>Пароль</label>
+                <input type="password" placeholder="Введите Пароль" name="password">
+                <div class="eye"></div>
+                <div class="error">0</div>
+              </div>
+              <div class="modal__link" data-link="reset">Забыли пароль</div>
+              <button class="form__button form__button--0" data-link="sign-out">войти</button>
+            </form>
+          </div>
+          <div class="modal__footer">
+            <div class="modal__link" data-link="sign-up">Зарегистрироваться</div>
+          </div>
+        </div>
+        <div class="modal__window modal__window--profile" id="sign-out">
+          <div class="wrapper">
+            <div class="modal__title1">Константин Константинопольский</div>
+            <div class="modal__title2">konstantinopolsky@gmail.com</div>
+            <button class="form__button form__button--undefined">личный кабинет</button>
+          </div>
+          <div class="modal__footer">
+            <div class="modal__link" data-link="sign-in">Выйти</div>
+          </div>
+        </div>
+        <div class="modal__window modal__window--profile" id="sign-up">
+          <div class="wrapper">
+            <div class="modal__title">Регистрация</div>
+            <form class="modal__form">
+              <div class="form__control">
+                <label>E-mail</label>
+                <input type="email" placeholder="Введите E-mail" name="email">
+                <div class="error">0</div>
+              </div>
+              <div class="form__control">
+                <label>Пароль</label>
+                <input type="password" placeholder="Введите Пароль" name="password">
+                <div class="eye"></div>
+                <div class="error">0</div>
+              </div>
+              <button class="form__button form__button--undefined">зарегистрироваться</button>
+            </form>
+          </div>
+          <div class="modal__footer">
+            <div class="modal__link" data-link="sign-in">войти</div>
+          </div>
+        </div>
+        <div class="modal__window modal__window--profile" id="reset">
+          <div class="wrapper">
+            <div class="modal__title">Восстановление пароля</div>
+            <form class="modal__form">
+              <div class="form__control">
+                <label>E-mail</label>
+                <input type="email" placeholder="Введите E-mail" name="email">
+                <div class="error">0</div>
+              </div>
+              <button class="form__button form__button--undefined">восстановить</button>
+            </form>
+          </div>
+          <div class="modal__footer">
+            <div class="modal__link" data-link="sign-in">войти</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <div class="container">
+        <h2 class="h2--bordered">Помощь</h2>
+        <h3 class="help__group-title">Инструкции и рекомендации</h3>
+        <div class="row"><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Инструкция по укладке стеклянной мозаики</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Инструкция по укладке стеклянной мозаики</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Инструкция по укладке стеклянной мозаики</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Инструкция по укладке стеклянной мозаики</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Инструкция по укладке стеклянной мозаики</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Инструкция по укладке стеклянной мозаики</div>
+            </div></a>
+        </div>
+        <h3 class="help__group-title">Другие материалы</h3>
+        <div class="row"><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--pdf" href="#">
+              <div class="help-item__text">Каталог продукции</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--doc" href="#">
+              <div class="help-item__text">Условия сотрудничества</div>
+            </div></a><a class="help-item--wrapper" href="#">
+            <div class="help-item help-item--xls" href="#">
+              <div class="help-item__text">Прайс-лист</div>
+            </div></a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__social">
+        <div class="container container--flex">
+          <div class="footer__subscribe-title">Подпишитесь на рассылку</div>
+          <form class="form__group">
+            <div class="form__control">
+              <input type="text" placeholder="Введите e-mail">
+            </div>
+            <button class="form__button form__button--base">Подписаться</button>
+          </form>
+          <div class="social-icons"><a class="icon icon--tw" href="#"></a><a class="icon icon--fb" href="#"></a><a class="icon icon--ig" href="#"></a><a class="icon icon--yt" href="#"></a><a class="icon icon--vk" href="#"></a></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__row"><a class="footer__link" href="#">Продукция</a><a class="footer__link" href="#">Галерея</a><a class="footer__link" href="#">Партнерам</a></div>
+          <div class="footer__row"><a class="footer__link" href="#">О компании</a><a class="footer__link" href="#">Новости</a><a class="footer__link" href="#">Мероприятия</a></div>
+          <div class="footer__row"><a class="footer__link" href="#">Дизайнерам</a><a class="footer__link" href="#">3D визуализатор</a><a class="footer__link" href="#">Скачать каталог</a></div>
+          <div class="footer__row"><a class="footer__link" href="/help.html">Помощь</a><a class="footer__link" href="#">Тех. документация</a><a class="footer__link" href="#">Прайс-лист</a></div>
+        </div>
+      </div>
+      <div class="footer__logo"></div>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAkpsFR3S2EGGF2vtQiGgxFIXtAEkjDZ7M"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel-min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

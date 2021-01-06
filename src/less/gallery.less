@@ -1,0 +1,227 @@
+.houses_wrapper {
+  position: relative;
+  &-title {
+    margin-top: 40px;
+    margin-bottom: 56px;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    .media_mobile({
+      margin-bottom: 40px;
+    })
+  }
+  .block {
+    .row();
+    &-wrapper {
+      .column(6,6,12);
+      .column_padding();
+    }
+    &-item {
+      position: relative;
+      margin-bottom: 40px;
+      display: block;
+      overflow: hidden;
+      &:before {
+        content: '';
+        width: 100%;
+        display: block;
+        padding-bottom: 70%;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 150%;
+        top: 0;
+        left: 0;
+        background-color: rgba(@black, 0);
+        transform: scale(0);
+        transition: all 0.4s ease-out;
+        border-radius: 50%;
+      }
+      &:hover {
+        &:after {
+          transform: scale(2);
+          background-color: rgba(@black, 1);
+        }
+      }
+
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+      &__title {
+          margin: auto;
+          position: absolute;
+          top: calc( 50% - 20px );
+          left: 0;
+          bottom: 0;
+          right: 0;
+          text-align: center;
+          font-size: 22px;
+          color: @white;
+          z-index: 10;
+
+      }
+    }
+  }
+}
+.materials_wrapper {
+  position: relative;
+  &-title {
+    margin-top: 40px;
+    margin-bottom: 56px;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    .media_mobile({
+      margin-bottom: 40px;
+    })
+  }
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      .column(4,4,12);
+      margin-bottom: 40px;
+      max-height: 256px;
+      position: relative;
+
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+      &__title {
+        margin: auto;
+        position: absolute;
+        top: calc( 50% - 20px );
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        font-size: 22px;
+        color: @white;
+      }
+    }
+  }
+}
+.materials_wrapper {
+  position: relative;
+  &-title {
+    margin-top: 40px;
+    margin-bottom: 56px;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    .media_mobile({
+      margin-bottom: 40px;
+    })
+  }
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      .column(4,4,12);
+      margin-bottom: 40px;
+      max-height: 256px;
+      position: relative;
+
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+      &__title {
+        margin: auto;
+        position: absolute;
+        top: calc( 50% - 20px );
+        text-shadow: -2px 0px 5px black, 0 0 1em black;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        font-size: 22px;
+        color: @white;
+      }
+    }
+  }
+}
+
+.collections_wrapper {
+  position: relative;
+  margin-bottom: 120px;
+  &-title {
+    margin-top: 40px;
+    margin-bottom: 56px;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    .media_mobile({
+      margin-bottom: 40px;
+    })
+  }
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      .column(3,3,6,6);
+      margin-bottom: 40px;
+      max-height: 256px;
+      position: relative;
+
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        text-align: center;
+        .media_desktop({
+          max-width: 200px;
+          margin: 0 28px;
+        });
+        .media_tablet({
+          max-width: 200px;
+          margin: 0 28px;
+        });
+
+        .media_mobile({
+          margin: 0px 10%;
+          width: 80%;
+        });
+
+
+
+      }
+      &__title {
+        .media_desktop({
+          margin: 0 0  0 28px;
+        });
+        text-shadow: -2px 0px 5px black, 0 0 1em black;
+        position: absolute;
+        top: calc( 50% - 15px );
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        font-size: 22px;
+        color: @white;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+extends template/layout
+
+block var
+    - var page = 'production'
+    mixin cart_product()
+        .cart_products_product
+            img.cart_products_product--img(src="/images/productions/product-1.png")
+            .block
+                .close
+                .block--name Имя продукта
+                .block--collection  Коллекция продукта
+                .block_wrapper
+                    .block_wrapper_price
+                        .block_wrapper_price--title Цена
+                        p.block_wrapper_price--value 10 000 р
+                    .block_wrapper_count
+                        .block_wrapper_count--title Колличество
+                        .block_wrapper_count_value
+                            .block_wrapper_count_value--quanyty-min
+                            .block_wrapper_count_value--quanyty-text 1.45 кв. м.
+                            .block_wrapper_count_value--quanyty-plus
+
+                    .block_wrapper_all_price
+                        .block_wrapper_all_price--title Стоимость
+                        .block_wrapper_all_price--value 10 000 р
+
+block content
+
+    .container
+        +breadcrumbs('black')
+        h2.h2--bordered Коорзина
+            a.h2--link(href="#") ВЕРСИЯ ДЛЯ ПЕЧАТИ
+        .cart
+            .cart_all_price
+                .cart_all_price_50
+                    .cart_all_price_50--title Всего без доставки:
+                    .cart_all_price_50--price 40 000 р
+                .cart_all_price_50
+                    a.cart_all_price_50--button.form__button.form__button--(href="order.html") оформить заказ
+            .cart_products
+                +cart_product()
+                +cart_product()
+                +cart_product()
+                +cart_product()
+                +cart_product()
+                +cart_product()
+
+            .cart_all_price
+                .cart_all_price_50
+                    .cart_all_price_50--title Всего без доставки:
+                    .cart_all_price_50--price 40 000 р
+                .cart_all_price_50
+                    a.cart_all_price_50--button.form__button.form__button--(href="order.html") оформить заказ
+            .cart_block_text
+                p.cart_block_text--title Способы оплаты:
+                ul
+                    li Наличными или с помощью банковской карты в нашем шоу-руме
+                    li По безналичному расчету (банковский перевод)
+                    li Оплата онлайн после подтверждения заказа менеджером
+                p При оплате заказа банковской картой возврат денежных средств производится на ту карту, с которой был произведен платеж
+                p При оплате заказа онлайн банковской картой, обработка платежа (включая ввод номера карты) происходит на защищенной странице процессинговой системы, которая прошла международную сертификацию. Это значит, что Ваши конфиденциальные данные (реквизиты карты, регистрационные данные и др.) не поступают в интернет-магазин, их обработка полностью защищена  и никто, в том числе наш интернет-магазин, не может получить персональные и банковские данные клиента
+                p Персональное работа изготавливается после внесения предоплаты  <br> Размер предоплаты определяется индивидуально и соответствует условиям договора
+
+                p.delevery_text Доставка:
+                .block_100
+                    .block_50
+                        ul
+                            li Наша компания осуществляет платную доставку  по Москве и МО
+                            li Доставка осуществляется в течение 4-х рабочих дней
+                            li Оплатить доставку можно заранее в офисе или при получении заказа на объекте
+                            li Доставка осуществляется до подъезда, разгрузка материалов в услугу не входит
+
+
+                    .block_50
+                        ul
+                            li Для дилеров бесплатная доставка до транспортной компании осуществляется по средам
+                            li Для крупных заказов, в зависимости от дальности объекта  и веса материала, наш менеджер рассчитает стоимость доставки
+                            li Склад находится по адресу: Московская область, г.п. Нахабино, ул. Школьная д.8., если вы планируете сделать самовывоз, то предварительно необходимо оформить пропуск на склад
+                .cart_contact
+                    p По всем интересующим вопросам, звоните по номеру:
+                    .cart_block_text--phone +7 495 9-210-210
+
+
